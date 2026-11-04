@@ -1,0 +1,17 @@
+name: Static checks
+on:
+  push:
+  pull_request:
+jobs:
+  bash-syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check Bash syntax
+        run: bash -n linux-admin-scripts/scripts/health-check.sh
+  python-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check project structure
+        run: python3 tests/test_structure.py

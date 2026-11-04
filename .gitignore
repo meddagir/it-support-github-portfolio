@@ -1,0 +1,14 @@
+*.log
+*.csv
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfplan
+.env
+.DS_Store
+__pycache__/
+*.pem
+*.pfx
+*.key
